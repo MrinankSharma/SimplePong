@@ -7,3 +7,5 @@ Music: http://ccmixter.org/content/boomaga/boomaga_-_Smoke_Lights.mp3, Smoke & L
 Game uses the SFML library, and is heavily based on this tutorial: http://gamecodeschool.com/sfml/coding-a-simple-pong-game-with-sfml/ 
 
 It is modifed to be a 2 player game in the more traditional pong format. 
+
+Font: https://www.dafont.com/press-start-2p.font
