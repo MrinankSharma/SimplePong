@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		10364B7023C4A91D001FC1EF /* boomaga.ogg in Resources */ = {isa = PBXBuildFile; fileRef = 10364B6F23C4A91D001FC1EF /* boomaga.ogg */; };
+		10364B7223C4A9BF001FC1EF /* PressStart2P.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 10364B7123C4A9BF001FC1EF /* PressStart2P.ttf */; };
+		10364B7523C4AC03001FC1EF /* bat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 10364B7423C4AC03001FC1EF /* bat.cpp */; };
+		10364B7823C4AD32001FC1EF /* ball.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 10364B7623C4AD32001FC1EF /* ball.cpp */; };
 		10C4193223C4A474005863E8 /* ResourcePath.mm in Sources */ = {isa = PBXBuildFile; fileRef = 10C4193123C4A474005863E8 /* ResourcePath.mm */; };
 		10C4193523C4A474005863E8 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 10C4193423C4A474005863E8 /* main.cpp */; };
 		10C4193823C4A474005863E8 /* cute_image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 10C4193723C4A474005863E8 /* cute_image.jpg */; };
@@ -16,6 +20,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		10364B6F23C4A91D001FC1EF /* boomaga.ogg */ = {isa = PBXFileReference; lastKnownFileType = file; name = boomaga.ogg; path = Pong/boomaga.ogg; sourceTree = SOURCE_ROOT; };
+		10364B7123C4A9BF001FC1EF /* PressStart2P.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = PressStart2P.ttf; path = Pong/PressStart2P.ttf; sourceTree = SOURCE_ROOT; };
+		10364B7323C4AAF6001FC1EF /* bat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bat.h; sourceTree = "<group>"; };
+		10364B7423C4AC03001FC1EF /* bat.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = bat.cpp; sourceTree = "<group>"; };
+		10364B7623C4AD32001FC1EF /* ball.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ball.cpp; sourceTree = "<group>"; };
+		10364B7923C4AD8B001FC1EF /* ball.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ball.h; sourceTree = "<group>"; };
 		10C4192C23C4A474005863E8 /* Pong.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pong.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10C4193023C4A474005863E8 /* Pong-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Pong-Info.plist"; path = "../Pong-Info.plist"; sourceTree = "<group>"; };
 		10C4193123C4A474005863E8 /* ResourcePath.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ResourcePath.mm; sourceTree = "<group>"; };
@@ -62,6 +72,10 @@
 				10C4193423C4A474005863E8 /* main.cpp */,
 				10C4193623C4A474005863E8 /* Resources */,
 				10C4192F23C4A474005863E8 /* Supporting Files */,
+				10364B7323C4AAF6001FC1EF /* bat.h */,
+				10364B7423C4AC03001FC1EF /* bat.cpp */,
+				10364B7623C4AD32001FC1EF /* ball.cpp */,
+				10364B7923C4AD8B001FC1EF /* ball.h */,
 			);
 			path = Pong;
 			sourceTree = "<group>";
@@ -77,6 +91,8 @@
 		10C4193623C4A474005863E8 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				10364B7123C4A9BF001FC1EF /* PressStart2P.ttf */,
+				10364B6F23C4A91D001FC1EF /* boomaga.ogg */,
 				10C4193723C4A474005863E8 /* cute_image.jpg */,
 				10C4193923C4A474005863E8 /* nice_music.ogg */,
 				10C4193B23C4A474005863E8 /* sansation.ttf */,
@@ -144,7 +160,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				10C4193E23C4A474005863E8 /* icon.png in Resources */,
+				10364B7023C4A91D001FC1EF /* boomaga.ogg in Resources */,
 				10C4193C23C4A474005863E8 /* sansation.ttf in Resources */,
+				10364B7223C4A9BF001FC1EF /* PressStart2P.ttf in Resources */,
 				10C4193A23C4A474005863E8 /* nice_music.ogg in Resources */,
 				10C4193823C4A474005863E8 /* cute_image.jpg in Resources */,
 			);
@@ -155,7 +173,7 @@
 /* Begin PBXShellScriptBuildPhase section */
 		10C4192A23C4A474005863E8 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			files = (
 			);
 			inputFileListPaths = (
@@ -166,9 +184,9 @@
 			);
 			outputPaths = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
-			shellScript = "# This shell script simply copies required SFML dylibs/frameworks into the application bundle frameworks folder.\n# If you're using static libraries (which is not recommended) you should remove this script from your project.\n\n# SETTINGS\nSFML_DEPENDENCIES_INSTALL_PREFIX=\"/Users/SFML/Desktop/packaging/tmp/install/Library/Frameworks\"\nCMAKE_INSTALL_FRAMEWORK_PREFIX=\"/Users/SFML/Desktop/packaging/tmp/install/Library/Frameworks\"\nCMAKE_INSTALL_LIB_PREFIX=\"/Users/SFML/Desktop/packaging/tmp/install/Library/Frameworks/lib\"\nFRAMEWORKS_FULL_PATH=\"$BUILT_PRODUCTS_DIR/$FRAMEWORKS_FOLDER_PATH/\"\n\n# Are we building a project that uses frameworks or dylibs?\ncase \"$SFML_BINARY_TYPE\" in\n    DYLIBS)\n        frameworks=\"false\"\n        ;;\n    *)\n        frameworks=\"true\"\n        ;;\nesac\n\n# Echoes to stderr\nerror () # $* message to display\n{\n    echo $* 1>&2\n    exit 2\n}\n\nassert () # $1 is a boolean, $2...N is an error message\n{\n    if [ $# -lt 2 ]\n    then\n        error \"Internal error in assert: not enough args\"\n    fi\n\n    if [ $1 -ne 0 ]\n    then\n        shift\n        error \"$*\"\n    fi\n}\n\nforce_remove () # $@ is some paths\n{\n    test $# -ge 1\n    assert $? \"force_remove() requires at least one parameter\"\n    rm -fr $@\n    assert $? \"couldn't remove $@\"\n}\n\ncopy () # $1 is a source, $2 is a destination\n{\n    test $# -eq 2\n    assert $? \"copy() requires two parameters\"\n    ditto \"$1\" \"$2\"\n    assert $? \"couldn't copy $1 to $2\"\n}\n\nrequire () # $1 is a SFML module like 'system' or 'audio'\n{\n    dest=\"$BUILT_PRODUCTS_DIR/$FRAMEWORKS_FOLDER_PATH/\"\n\n    if [ -z \"$1\" ]\n    then\n        error \"require() requires one parameter!\"\n    else\n        # clean potentially old stuff\n        force_remove \"$dest/libsfml-$1\"*\n        force_remove \"$dest/sfml-$1.framework\"\n\n        # copy SFML libraries\n        if [ \"$frameworks\" = \"true\" ]\n        then\n            source=\"$CMAKE_INSTALL_FRAMEWORK_PREFIX/sfml-$1.framework\"\n            target=\"sfml-$1.framework\"\n        elif [ \"$SFML_LINK_DYLIBS_SUFFIX\" = \"-d\" ]\n        then\n            source=\"$CMAKE_INSTALL_LIB_PREFIX/libsfml-$1-d.dylib\"\n            target=\"`readlink $source`\"\n        else\n            source=\"$CMAKE_INSTALL_LIB_PREFIX/libsfml-$1.dylib\"\n            target=\"`readlink $source`\"\n        fi\n\n        copy \"$source\" \"$dest/$target\"\n\n        # copy extra dependencies\n        if [ \"$1\" = \"audio\" ]\n        then\n            # copy \"FLAC\" \"ogg\" \"vorbis\" \"vorbisenc\" \"vorbisfile\" \"OpenAL\" frameworks too\n            for f in \"FLAC\" \"ogg\" \"vorbis\" \"vorbisenc\" \"vorbisfile\" \"OpenAL\"\n            do\n                copy \"$SFML_DEPENDENCIES_INSTALL_PREFIX/$f.framework\" \"$dest/$f.framework\"\n            done\n        elif [ \"$1\" = \"graphics\" ]\n        then\n            copy \"$SFML_DEPENDENCIES_INSTALL_PREFIX/freetype.framework\" \"$dest/freetype.framework\"\n        fi\n    fi\n}\n\nif [ -n \"$SFML_SYSTEM\" ]\nthen\n    require \"system\"\nfi\n\nif [ -n \"$SFML_AUDIO\" ]\nthen\n    require \"audio\"\nfi\n\nif [ -n \"$SFML_NETWORK\" ]\nthen\n    require \"network\"\nfi\n\nif [ -n \"$SFML_WINDOW\" ]\nthen\n    require \"window\"\nfi\n\nif [ -n \"$SFML_GRAPHICS\" ]\nthen\n    require \"graphics\"\nfi\n\n                ";
+			shellScript = "# This shell script simply copies required SFML dylibs/frameworks into the application bundle frameworks folder.\n# If you're using static libraries (which is not recommended) you should remove this script from your project.\n\n# SETTINGS\nSFML_DEPENDENCIES_INSTALL_PREFIX=\"/Users/SFML/Desktop/packaging/tmp/install/Library/Frameworks\"\nCMAKE_INSTALL_FRAMEWORK_PREFIX=\"/Users/SFML/Desktop/packaging/tmp/install/Library/Frameworks\"\nCMAKE_INSTALL_LIB_PREFIX=\"/Users/SFML/Desktop/packaging/tmp/install/Library/Frameworks/lib\"\nFRAMEWORKS_FULL_PATH=\"$BUILT_PRODUCTS_DIR/$FRAMEWORKS_FOLDER_PATH/\"\n\n# Are we building a project that uses frameworks or dylibs?\ncase \"$SFML_BINARY_TYPE\" in\n    DYLIBS)\n        frameworks=\"false\"\n        ;;\n    *)\n        frameworks=\"true\"\n        ;;\nesac\n\n# Echoes to stderr\nerror () # $* message to display\n{\n    echo $* 1>&2\n    exit 2\n}\n\nassert () # $1 is a boolean, $2...N is an error message\n{\n    if [ $# -lt 2 ]\n    then\n        error \"Internal error in assert: not enough args\"\n    fi\n\n    if [ $1 -ne 0 ]\n    then\n        shift\n        error \"$*\"\n    fi\n}\n\nforce_remove () # $@ is some paths\n{\n    test $# -ge 1\n    assert $? \"force_remove() requires at least one parameter\"\n    rm -fr $@\n    assert $? \"couldn't remove $@\"\n}\n\ncopy () # $1 is a source, $2 is a destination\n{\n    test $# -eq 2\n    assert $? \"copy() requires two parameters\"\n    ditto \"$1\" \"$2\"\n    assert $? \"couldn't copy $1 to $2\"\n}\n\nrequire () # $1 is a SFML module like 'system' or 'audio'\n{\n    dest=\"$BUILT_PRODUCTS_DIR/$FRAMEWORKS_FOLDER_PATH/\"\n\n    if [ -z \"$1\" ]\n    then\n        error \"require() requires one parameter!\"\n    else\n        # clean potentially old stuff\n        force_remove \"$dest/libsfml-$1\"*\n        force_remove \"$dest/sfml-$1.framework\"\n\n        # copy SFML libraries\n        if [ \"$frameworks\" = \"true\" ]\n        then\n            source=\"$CMAKE_INSTALL_FRAMEWORK_PREFIX/sfml-$1.framework\"\n            target=\"sfml-$1.framework\"\n        elif [ \"$SFML_LINK_DYLIBS_SUFFIX\" = \"-d\" ]\n        then\n            source=\"$CMAKE_INSTALL_LIB_PREFIX/libsfml-$1-d.dylib\"\n            target=\"`readlink $source`\"\n        else\n            source=\"$CMAKE_INSTALL_LIB_PREFIX/libsfml-$1.dylib\"\n            target=\"`readlink $source`\"\n        fi\n\n        copy \"$source\" \"$dest/$target\"\n\n        # copy extra dependencies\n        if [ \"$1\" = \"audio\" ]\n        then\n            # copy \"FLAC\" \"ogg\" \"vorbis\" \"vorbisenc\" \"vorbisfile\" \"OpenAL\" frameworks too\n            for f in \"FLAC\" \"ogg\" \"vorbis\" \"vorbisenc\" \"vorbisfile\" \"OpenAL\"\n            do\n                copy \"$SFML_DEPENDENCIES_INSTALL_PREFIX/$f.framework\" \"$dest/$f.framework\"\n            done\n        elif [ \"$1\" = \"graphics\" ]\n        then\n            copy \"$SFML_DEPENDENCIES_INSTALL_PREFIX/freetype.framework\" \"$dest/freetype.framework\"\n        fi\n    fi\n}\n\nif [ -n \"$SFML_SYSTEM\" ]\nthen\n    require \"system\"\nfi\n\nif [ -n \"$SFML_AUDIO\" ]\nthen\n    require \"audio\"\nfi\n\nif [ -n \"$SFML_NETWORK\" ]\nthen\n    require \"network\"\nfi\n\nif [ -n \"$SFML_WINDOW\" ]\nthen\n    require \"window\"\nfi\n\nif [ -n \"$SFML_GRAPHICS\" ]\nthen\n    require \"graphics\"\nfi\n\n                \n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -177,6 +195,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10364B7823C4AD32001FC1EF /* ball.cpp in Sources */,
+				10364B7523C4AC03001FC1EF /* bat.cpp in Sources */,
 				10C4193523C4A474005863E8 /* main.cpp in Sources */,
 				10C4193223C4A474005863E8 /* ResourcePath.mm in Sources */,
 			);
