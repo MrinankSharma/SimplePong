@@ -9,3 +9,5 @@ Game uses the SFML library, and is heavily based on this tutorial: http://gameco
 It is modifed to be a 2 player game in the more traditional pong format. 
 
 Font: https://www.dafont.com/press-start-2p.font
+
+If you clone this on an OSX device, you should be able to run the `.app` to play.  
